@@ -243,8 +243,8 @@ public class Main {
         System.out.print("enter seconds: ");
         int totalSeconds = data.nextInt();
         int hours = totalSeconds / 3600;//نقسم على عدد الثواني في الساعه
-        int minutes = (totalSeconds % 3600) / 60;
-        int seconds = totalSeconds % 60;
+        int minutes = (totalSeconds % 3600) / 60;//حساب الدقائق
+        int seconds = totalSeconds % 60;//حساب الثواني المتبقية
         System.out.printf(hours+":" +minutes+":"+ seconds);
 
 
@@ -269,7 +269,7 @@ public class Main {
         System.out.print("enter fourth number: ");
         int fourthNum4 = data.nextInt();
 
-        if (firstNum1 == secondNum2 && secondNum2 == thirdNum3 && thirdNum3 == fourthNum4) {
+        if (firstNum1 == secondNum2 && secondNum2 == thirdNum3 && thirdNum3 == fourthNum4) {//يتاكد ان الارقام متساويه
             System.out.println("Numbers are equal.");
         } else {
             System.out.println("Numbers are not equal!");
@@ -284,9 +284,9 @@ public class Main {
         System.out.print("enter number: ");
         int n = data.nextInt();
 
-        if (n > 0) {
+        if (n > 0) {//اكبر من 0 موجب
             System.out.println("Number is positive");
-        } else if (n < 0) {
+        } else if (n < 0) {//اصغر من 0 سالب
             System.out.println("Number is negative");
         } else {
             System.out.println("Number is zero");
@@ -317,7 +317,7 @@ public class Main {
         while (true) {
             nom = data.nextInt();
 
-            if (nom == -1) {
+            if (nom == -1) {//شرط التوقف
                 break;
             }
 
@@ -340,11 +340,11 @@ public class Main {
         System.out.print("Enter an integer: ");
         int j = data.nextInt();
 
-        int reversedNumber = 0;
+        int reversedNumber = 0;//يخزن الرقم المغكوس
 
         while (j != 0) {
-            int digit = j % 10;
-            reversedNumber = reversedNumber * 10 + digit;
+            int digit = j % 10;//استخراج اخر عدد
+            reversedNumber = reversedNumber * 10 + digit;//اضافة الرقم المستخرج للرقم المعكوس
             j /= 10;
         }
 
@@ -360,15 +360,15 @@ public class Main {
 //        the large number : 9
 //        the small number : -1
 
-        int largest = Integer.MIN_VALUE;
-        int smallest = Integer.MAX_VALUE;
+        int largest = Integer.MIN_VALUE;//تخزين اكبر عدد
+        int smallest = Integer.MAX_VALUE;//تخزين اصغر عدد
         boolean enter = true;
 
         while (enter) {
             System.out.print("enter number or 0 to exit ");
             int nu = data.nextInt();
 
-            if (nu == 0) {
+            if (nu == 0) {//شرط التوقف
                 enter = false;
             } else {
                 if (nu > largest) {
@@ -397,10 +397,10 @@ public class Main {
 
         int count2 = 0;
 
-        for (int i = 0; i < input.length(); i++) {
-            char ch = input.charAt(i);
+        for (int i = 0; i < input.length(); i++) {//لوب يمر على كل حرف في الكلمة
+            char ch = input.charAt(i);//استخراج الاحرف الحالي
 
-            if (ch == 'a' || ch == 'A') {
+            if (ch == 'a' || ch == 'A') {//يتحقق من الحرف
                 count2++;
             }
         }
